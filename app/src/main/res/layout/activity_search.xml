@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout_search"
+>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar_search"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize">
+                <EditText
+                    android:id="@+id/EditText_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:background="@null"
+                    android:textCursorDrawable="@drawable/cursor_search"
+                    android:hint="@string/search_textView_hint"
+                    android:imeOptions="actionSearch"
+                    android:maxLines="1" />
+            </android.support.v7.widget.Toolbar>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/Button_Collection"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textAppearance="@style/SearchBarBtn"
+                    android:drawableLeft="@drawable/ic_search_star"
+                    android:drawableStart="@drawable/ic_search_star"
+                    android:text="@string/search_collection"/>
+                <Button
+                    android:id="@+id/Button_SelFromMap"
+                    android:layout_width="144dp"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textAppearance="@style/SearchBarBtn"
+                    android:drawableLeft="@drawable/ic_search_selfrommap"
+                    android:drawableStart="@drawable/ic_search_selfrommap"
+                    android:text="@string/search_selFromMap"/>
+            </LinearLayout>
+        </android.support.design.widget.AppBarLayout>
+        <android.support.v7.widget.RecyclerView
+            android:padding="16dp"
+            android:id="@+id/RecyclerView_search_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <!-- 暂时先不用这个ScrollView-->
+        <ScrollView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:visibility="gone"
+                    android:id="@+id/RecyclerView_search_POI"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

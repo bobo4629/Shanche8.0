@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/pre_category_settings">
+
+        <SwitchPreference android:title="@string/pre_title_way_vibrate"
+            android:key="@string/pre_key_way_vibrate"
+            android:defaultValue="true"
+            />
+        <SwitchPreference android:title="@string/pre_title_way_ringtone"
+            android:key="@string/pre_key_way_ringtone"
+            android:defaultValue="false"
+            />
+
+        <ListPreference android:title="@string/pre_title_refresh_time"
+            android:key="@string/pre_key_refresh_time"
+            android:defaultValue="15000"
+            android:summary="%s"
+            android:entries="@array/pre_item_title_refresh_time"
+            android:entryValues="@array/pre_item_value_refresh_time"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pre_category_about">
+        <Preference android:title="@string/pre_about_appname"
+            android:key="about"
+            android:summary="@string/app_version"/>
+        <SwitchPreference android:title="@string/pre_about_title_update"
+            android:key="@string/pre_about_key_update"
+            android:defaultValue="true"/>
+        <Preference android:title="@string/pre_about_title_donate"
+            android:key="@string/pre_about_key_donate"/>
+        <Preference android:title="@string/pre_about_github"
+            android:key="github"
+            android:summary="@string/pre_about_github_summary"/>
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

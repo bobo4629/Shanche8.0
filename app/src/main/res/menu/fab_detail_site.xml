@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fab_item_fav"
+        android:title="@string/fab_no_fav"
+        android:icon="@drawable/ic_line_no_fav"/>
+
+    <item
+        android:id="@+id/fab_item_swap"
+        android:title="@string/fab_updown_change"
+        android:icon="@drawable/ic_line_swap"/>
+
+    <item
+        android:id="@+id/fab_item_refresh"
+        android:title="@string/fab_refresh"
+        android:icon="@drawable/ic_line_refresh"/>
+</menu>

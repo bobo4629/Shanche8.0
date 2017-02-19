@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayout_main"
+    android:fitsSystemWindows="true"
+    tools:context="bobo.shanche.activity.MainActivity">
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:elevation="4dp"
+            android:layout_height="104dp"
+            android:paddingTop="0dp"
+            android:paddingLeft="16dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:paddingBottom="16dp"
+            android:paddingRight="16dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/Button_main_collection"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:textColor="@android:color/white"
+                android:drawableTop="@drawable/ic_main_button_star"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/search_collection"/>
+            <Button
+                android:id="@+id/Button_main_home"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:textColor="@android:color/white"
+                android:drawableTop="@drawable/ic_main_button_home"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/main_button_home"/>
+
+            <Button
+                android:id="@+id/Button_main_work"
+                android:layout_marginLeft="36dp"
+                android:layout_marginStart="36dp"
+                android:gravity="center"
+                android:background="?android:attr/selectableItemBackground"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:textColor="@android:color/white"
+                android:drawableTop="@drawable/ic_main_button_work"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+                android:text="@string/main_button_work"/>
+        </LinearLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@drawable/ic_com_search"
+        app:pressedTranslationZ="6dp"
+        android:layout_margin="16dp"
+        app:useCompatPadding="true"
+        android:layout_gravity="bottom|end" />
+
+</android.support.design.widget.CoordinatorLayout>
